@@ -1,4 +1,4 @@
-# DataMiningNotes
+# Data Mining Notes
 
 Review notes for the course Data Mining at Universitaet Ulm (in chinese)
 
