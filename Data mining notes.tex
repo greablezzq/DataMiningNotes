@@ -261,18 +261,18 @@
     \end{itemize}
     例如如果有三个聚类中心$C_1,C_2,C_3$，数据$x$属于$C_1$即为Crisp clustering，数据$x$对于三个聚类点的归属程度分别为$[0.8,0.1,0.1]$即为Fuzzy clustering。Crisp clustering可视为Fuzzy clustering的一种特殊情况（即归属程度为$[1,0,0]$）。
 
-    \item Constraints for fuzzifier: (概率约束)
+    \item Constraints for fuzzy membership: (概率约束)
     \begin{enumerate}
         \item $f_{\mu,j} \in [0,1]$
         \item $\sum_j f_{\mu,j}=1$
     \end{enumerate}
 
     \item (Slides 137)已知数据和fuzzy matrix，如何计算聚类中心：思路类似于加权平均数。
-    \item (Slides 138-140)已知数据和聚类中心，对于每一个数据，如何计算fuzzifier：这是一个约束条件的最优化问题，Slides中用拉格郎日乘数法计算。应该不用记公式，也不用看懂推导过程。
-    \item 通过上两步，我们得到了更新聚类中心和更新fuzzifier的方法。因此我们可以执行Fuzzy-k-means算法：
+    \item (Slides 138-140)已知数据和聚类中心，对于每一个数据，如何计算fuzzy membership：这是一个约束条件的最优化问题，Slides中用拉格郎日乘数法计算。应该不用记公式，也不用看懂推导过程。
+    \item 通过上两步，我们得到了更新聚类中心和更新fuzzy membership的方法。因此我们可以执行Fuzzy-k-means算法：
     \begin{itemize}
         \item 首先随机选取聚类的中心点。
-        \item 根据聚类中心，分配数据（计算fuzzifier）。
+        \item 根据聚类中心，分配数据（计算fuzzy membership）。
         \item 根据fuzzy matrix， 更新聚类中心。
         \item 重复执行上述算法。
     \end{itemize}
@@ -312,7 +312,7 @@
     \begin{enumerate}
         \item Agglomerative clustering中SCL和CLC的计算、绘制树状图、判断树状图属于哪种算法。SCL和CLC的区别，SCL的chaining effect。
         \item Partitional clustering中理解Variance criterion。k-means clustering的计算过程。
-        \item Fuzzy cluster: 理解fuzzy cluster，fuzzy cluster和crisp clustering的区别，fuzzifier的约束条件。
+        \item Fuzzy cluster: 理解fuzzy cluster，fuzzy cluster和crisp clustering的区别，fuzzy membership的约束条件。
     \end{enumerate}
 \end{zd}
 \section{数据可视化与降维}
